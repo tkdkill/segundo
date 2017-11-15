@@ -1,3 +1,44 @@
-<p>
-    stock!
-</p>
+<div class="row panel panel-default espaco-stock">
+
+  <div class="espaco-interior">
+    <h2>Stock</h2>
+
+  </div>
+
+  <!-- quantidades de p+rodutos -->
+  <div class="espaco-interior">
+    <div class="row">
+      <p [ngStyle]="{'color': estiloAnanases()}">Ananáses: {{total_ananases}}</p>
+    </div>
+    <div class="row">
+      <p [ngStyle]="{'color': estiloBananas()}">Bananas: {{total_bananas}}</p>
+    </div>
+
+    <div class="row">
+      <p [ngStyle]="{'color': estiloLaranjas()}">Laranjas: {{total_laranjas}}</p>
+    </div>
+
+    <!-- total dos dos produtos -->
+    <div class="row">
+        <!-- <p>TOTAL: {{total_produtos}}</p> -->
+        <p>TOTAL: {{calcularTotal()}}</p>
+    </div>
+
+    <!-- botões -->
+    <div class="row text-right">
+        <button class="btn btn-default btn-size" (click)="adicionarAnanas()">+ Ananás</button>
+        <button class="btn btn-default btn-size" (click)="removerAnanas()">- Ananás</button>
+
+        <button class="btn btn-default btn-size" (click)="adicionarBananas()">+ Bananas</button>
+        <button class="btn btn-default btn-size" (click)="removerBananas()">- Bananas</button>
+
+        <button class="btn btn-default btn-size" (click)="adicionarLaranjas()">+ Laranjas</button>
+        <button class="btn btn-default btn-size" (click)="removerLaranjas()">- Laranjas</button>
+
+
+    </div>
+
+    
+  </div>
+
+</div>
